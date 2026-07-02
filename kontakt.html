@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kontakt · Fotostudio Light-Style · Andi</title>
+<meta name="description" content="Schreib uns — am liebsten per WhatsApp. Atelier in Rodenbach, Jahnstr. 7. Termine nach Vereinbarung.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@300;400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="page">
+<header class="nav" data-nav>
+  <div class="container nav__inner">
+    <a class="nav__brand" href="index.html">
+      <span class="nav__brand-logo" aria-hidden="true"><span class="nav__brand-logo-italic">L</span>S</span>
+      <span>
+        <span class="nav__brand-name">Light<span class="nav__brand-name-divider">·</span>Style</span>
+        <span class="nav__brand-sub">Fotograf · seit 1990</span>
+      </span>
+    </a>
+    <button class="nav__toggle" type="button" data-nav-toggle aria-label="Menü öffnen" aria-expanded="false"><span class="nav__toggle-bars"></span></button>
+    <nav aria-label="Hauptnavigation">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="index.html">Atelier</a></li>
+        <li><a class="nav__link" href="leistungen.html">Leistungen</a></li>
+        <li><a class="nav__link" href="ueber-mich.html">Über uns</a></li>
+        <li><a class="nav__link" href="journal.html">Journal</a></li>
+        <li><a class="nav__link" href="gutscheine.html">Gutscheine</a></li>
+        <li><a class="nav__link" href="aktionen.html">Aktionen</a></li>
+        <li><a class="nav__link is-active" href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a class="nav__cta" href="buchung.html">Termin buchen <svg class="icon-arrow button__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg></a>
+  </div>
+</header>
+<main>
+  <section class="section section--tight">
+    <div class="container">
+      <div class="reveal">
+        <span class="label"><span class="label__num">06</span>Kontakt</span>
+        <h1 class="page-heading">Schreib uns —<br><span class="text-italic--accent-block">am liebsten per WhatsApp.</span></h1>
+      </div>
+
+      <div class="contact-grid">
+        <div class="reveal">
+          <div data-form-container>
+          <form class="form" data-contact-form>
+            <div class="field">
+              <label class="field__label" for="f-vorname">Vorname</label>
+              <input class="field__input" type="text" id="f-vorname" name="vorname" placeholder="Anna" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-nachname">Nachname</label>
+              <input class="field__input" type="text" id="f-nachname" name="nachname" placeholder="Beispiel" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-email">E-Mail</label>
+              <input class="field__input" type="email" id="f-email" name="email" placeholder="anna@beispiel.de" required>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-telefon">Telefon</label>
+              <input class="field__input" type="tel" id="f-telefon" name="telefon" placeholder="+49 …">
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-leistung">Leistungsart</label>
+              <select class="field__select" id="f-leistung" name="leistung">
+                <option value="">Bitte wählen</option>
+                <option value="babybauch">Babybauch</option>
+                <option value="newborn-baby">Neugeborene &amp; Babys</option>
+                <option value="familie">Familie</option>
+                <option value="paar">Paar</option>
+                <option value="hochzeit">Hochzeit</option>
+                <option value="boudoir">Boudoir</option>
+                <option value="portrait">Portrait</option>
+                <option value="tier">Tier</option>
+                <option value="bewerbung">Bewerbung</option>
+                <option value="business">Business</option>
+                <option value="branding">Personal Brand</option>
+                <option value="werbung">Werbefotografie</option>
+                <option value="event">Event</option>
+                <option value="akt">Akt</option>
+                <option value="pass">Passfotos</option>
+                <option value="gutschein">Gutscheine</option>
+              </select>
+            </div>
+            <div class="field">
+              <label class="field__label" for="f-termin">Wunschtermin</label>
+              <input class="field__input" type="date" id="f-termin" name="termin">
+            </div>
+            <div class="field field--full">
+              <label class="field__label" for="f-nachricht">Deine Nachricht</label>
+              <textarea class="field__textarea" id="f-nachricht" name="nachricht" placeholder="Erzähl in zwei, drei Sätzen, was du dir vorstellst."></textarea>
+            </div>
+            <div class="form__footer">
+              <span class="form__notice">Antwort meist am selben Tag</span>
+              <button class="button button--primary" type="submit">Anfrage senden <svg class="icon-arrow button__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg></button>
+            </div>
+          </form>
+          </div>
+
+          <div class="form-success" data-form-success hidden>
+            <div class="form-success__title">Danke.</div>
+            <p class="body-serif">Wir haben deine Anfrage erhalten. Du hörst meist am selben Tag von uns — spätestens am nächsten Werktag.</p>
+          </div>
+        </div>
+
+        <div class="reveal contact-details" data-reveal-delay="120">
+          <div>
+            <span class="label contact-detail__label">Atelier</span>
+            <div class="contact-detail__value">Jahnstr. 7<br>63517 Rodenbach</div>
+          </div>
+          <div>
+            <span class="label contact-detail__label">WhatsApp</span>
+            <div class="button-row button-row--mid">
+              <a class="button button--primary" href="https://wa.me/4915114268259" target="_blank" rel="noopener">Per WhatsApp schreiben <svg class="icon-arrow button__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg></a>
+            </div>
+          </div>
+          <div>
+            <span class="label contact-detail__label">E-Mail</span>
+            <div class="contact-detail__value contact-detail__value--small"><a href="mailto:contact@studio-light-style.de">contact@studio-light-style.de</a></div>
+          </div>
+          <div class="contact-hours">
+            <span class="label contact-detail__label">Öffnungszeiten</span>
+            <p class="body-serif--small">Termine nach Vereinbarung — Montag bis Samstag, oft auch abends.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal contact-map">
+        <span class="label contact-map__label">Anfahrt · Google Maps</span>
+        <div class="map">
+          <div class="map__pin"></div>
+          <div class="map__address">Jahnstr. 7 · 63517 Rodenbach</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">Light<span class="footer__brand-divider">·</span>Style</div>
+        <p class="body-serif footer__about">Andi · Fotograf seit 1990. Studio in Rodenbach, weltweit tätig.</p>
+        <address class="footer__address">Jahnstr. 7 · 63517 Rodenbach</address>
+        <p class="footer__contact"><a href="mailto:contact@studio-light-style.de">contact@studio-light-style.de</a></p>
+      </div>
+      <div>
+        <h2 class="footer__col-title">Atelier</h2>
+        <ul class="footer__nav">
+          <li><a href="index.html">Startseite</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="ueber-mich.html">Über uns</a></li>
+          <li><a href="journal.html">Journal</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__col-title">Service</h2>
+        <ul class="footer__nav">
+          <li><a href="buchung.html">Terminbuchung</a></li>
+          <li><a href="gutscheine.html">Gutscheine</a></li>
+          <li><a href="aktionen.html">Aktionen</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="https://www.light-style.eu/Blog" target="_blank" rel="noopener">Blog</a></li>
+          <li><a href="https://www.light-style.eu/unser-foto-shop/" target="_blank" rel="noopener">Foto-Shop</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer__col-title">Folgen</h2>
+        <ul class="footer__social-list">
+          <li><a class="footer__social" href="https://instagram.com/light.style" target="_blank" rel="noopener"><span>Instagram</span></a></li>
+          <li><a class="footer__social" href="https://www.facebook.com/profile.php?id=100058599199707" target="_blank" rel="noopener"><span>Facebook</span></a></li>
+          <li><a class="footer__social" href="https://www.youtube.com/@photostudio-light-style" target="_blank" rel="noopener"><span>YouTube</span></a></li>
+          <li><a class="footer__social" href="https://wa.me/4915114268259" target="_blank" rel="noopener"><span>WhatsApp</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__copy-row">
+      <span class="footer__copy">© 1990 – 2026 Andreas Möller · USt-ID DE243380881</span>
+      <span class="footer__legal">Impressum · Datenschutz · AGB</span>
+    </div>
+  </div>
+</footer>
+</div>
+
+<div class="cookie-banner" data-cookie-banner hidden>
+  <div class="cookie-banner__text-wrap">
+    <div class="cookie-banner__title">Cookies &amp; Datenschutz</div>
+    <p class="cookie-banner__text">Wir verwenden nur technisch notwendige Cookies, um diese Seite bereitzustellen. Es findet kein Tracking ohne deine Einwilligung statt.</p>
+  </div>
+  <div class="cookie-banner__actions">
+    <button class="cookie-banner__button" type="button" data-cookie-action="declined">Ablehnen</button>
+    <button class="cookie-banner__button cookie-banner__button--accept" type="button" data-cookie-action="accepted">Akzeptieren</button>
+  </div>
+</div>
+
+<script src="js/reveal.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
