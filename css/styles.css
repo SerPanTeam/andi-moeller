@@ -620,5 +620,9 @@ body:has(.contact-grid) .wa-float { display: none !important; }
 .review__stars { color: var(--color-accent); letter-spacing: 3px; font-size: 15px; }
 .review__text { font-family: var(--font-editorial); font-size: 15px; line-height: 1.6; color: var(--color-ink); font-style: italic; }
 .review__author { font-family: var(--font-ui); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--color-muted); font-style: normal; margin-top: auto; }
+/* Indikator fuer externe Links (Text-Links, keine Buttons/Icon-Links) */
+a[target="_blank"]:not(.button):not(.nav__cta):not(.link-arrow):not(.footer__social):not(.wa-float)::after {
+  content: "\2197"; font-size: .8em; line-height: 0; margin-left: .18em; opacity: .65; vertical-align: baseline;
+}
 .trust-badge { margin-top: 20px; font-family: var(--font-ui); font-size: 12.5px; letter-spacing: .04em; color: var(--color-ink-2); }
 .trust-badge__stars { color: var(--color-accent); letter-spacing: 2px; margin-right: 4px; }
