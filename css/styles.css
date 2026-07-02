@@ -113,7 +113,8 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
   border-bottom: 1px solid var(--color-hairline-2);
 }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; padding: 18px 0; gap: 32px; }
-.nav__brand { display: flex; align-items: baseline; gap: 14px; font-family: var(--font-display); }
+.nav__brand { display: flex; align-items: center; gap: 14px; font-family: var(--font-display); }
+.nav__brand-mark { height: 42px; width: auto; display: block; }
 .nav__brand-logo {
   display: inline-flex; align-items: center; justify-content: center;
   width: 36px; height: 36px; border: 1px solid var(--color-ink);
@@ -420,6 +421,7 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 .footer__grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 32px; }
 @media (max-width: 720px) { .footer__grid { grid-template-columns: 1fr 1fr; } }
 .footer__brand { font-family: var(--font-display); font-size: 38px; line-height: 1; letter-spacing: -.01em; }
+.footer__logo { width: 190px; height: auto; display: block; }
 .footer__brand-divider { font-style: italic; color: var(--color-accent); }
 .footer__about { margin-top: 18px; max-width: 32ch; }
 .footer__address { margin-top: 22px; font-size: 12px; letter-spacing: .06em; color: var(--color-ink-2); line-height: 1.7; font-style: normal; }
