@@ -144,6 +144,65 @@
     });
   }
 
+  /* ─ Diashow / Slider (leistung-*.html) ────────────────────────── */
+  document.querySelectorAll("[data-slider]").forEach(function (slider) {
+    var track = slider.querySelector("[data-slider-track]");
+    var slides = slider.querySelectorAll(".slider__slide");
+    var prev = slider.querySelector("[data-slider-prev]");
+    var next = slider.querySelector("[data-slider-next]");
+    var dotsBox = slider.querySelector("[data-slider-dots]");
+    if (!track || slides.length === 0) return;
+
+    if (slides.length < 2) {
+      if (prev) prev.hidden = true;
+      if (next) next.hidden = true;
+      return;
+    }
+
+    var index = 0;
+    var dots = [];
+    if (dotsBox) {
+      slides.forEach(function (_, i) {
+        var d = document.createElement("button");
+        d.type = "button";
+        d.className = "slider__dot" + (i === 0 ? " is-active" : "");
+        d.setAttribute("aria-label", "Bild " + (i + 1));
+        d.addEventListener("click", function () { go(i); });
+        dotsBox.appendChild(d);
+        dots.push(d);
+      });
+    }
+
+    function setActive(i) {
+      index = i;
+      dots.forEach(function (d, k) { d.classList.toggle("is-active", k === i); });
+    }
+    function go(i) {
+      i = (i + slides.length) % slides.length;
+      track.scrollTo({ left: i * track.clientWidth, behavior: "smooth" });
+      setActive(i);
+    }
+    if (prev) prev.addEventListener("click", function () { go(index - 1); });
+    if (next) next.addEventListener("click", function () { go(index + 1); });
+
+    var scrollTimer = null;
+    track.addEventListener("scroll", function () {
+      if (scrollTimer) window.clearTimeout(scrollTimer);
+      scrollTimer = window.setTimeout(function () {
+        setActive(Math.round(track.scrollLeft / track.clientWidth));
+      }, 90);
+    });
+
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!reduce) {
+      var timer = window.setInterval(function () { go(index + 1); }, 5000);
+      var stop = function () { if (timer) { window.clearInterval(timer); timer = null; } };
+      slider.addEventListener("mouseenter", stop);
+      slider.addEventListener("focusin", stop);
+      slider.addEventListener("touchstart", stop, { passive: true });
+    }
+  });
+
   /* ─ Kalender (buchung.html) ───────────────────────────────────── */
   var calendar = document.querySelector("[data-calendar]");
   if (!calendar) return;
