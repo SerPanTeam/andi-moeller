@@ -125,11 +125,31 @@
         }
       }
       var betrag = params.get("betrag");
+      var aktion = params.get("aktion");
       var msg = form.querySelector('[name="nachricht"]');
-      if (betrag && msg && !msg.value) {
-        msg.value = "Ich interessiere mich für einen Gutschein über " + betrag + " €.";
+      if (msg && !msg.value) {
+        if (slug === "gutschein" || betrag) {
+          msg.value = "Ich möchte einen Gutschein" + (betrag ? " über " + betrag + " €" : "") +
+            ".\nAls: (PDF oder gedruckte Karte)\nWidmung / Name des/der Beschenkten: ";
+        } else if (aktion) {
+          msg.value = "Ich interessiere mich für die Aktion: " + aktion + ".";
+        }
       }
     } catch (e) {}
+
+    // Deutsche Pflichtfeld-Meldungen
+    form.querySelectorAll("[required]").forEach(function (el) {
+      el.addEventListener("invalid", function () {
+        if (el.validity.valueMissing) {
+          el.setCustomValidity(el.type === "checkbox"
+            ? "Bitte bestätige die Datenschutzerklärung."
+            : "Bitte fülle dieses Feld aus.");
+        } else if (el.validity.typeMismatch && el.type === "email") {
+          el.setCustomValidity("Bitte gib eine gültige E-Mail-Adresse ein.");
+        }
+      });
+      el.addEventListener("input", function () { el.setCustomValidity(""); });
+    });
 
     form.addEventListener("submit", function (e) {
       e.preventDefault();

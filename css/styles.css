@@ -567,14 +567,14 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 .cookie-banner {
   position: fixed; left: 0; right: 0; bottom: 0; z-index: 80;
   background: var(--color-ink); color: var(--color-bg);
-  padding: 18px var(--shell-pad);
-  display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+  padding: 11px var(--shell-pad);
+  display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap;
 }
 .cookie-banner[hidden] { display: none; }
-@media (max-width: 720px) { .cookie-banner { padding: 16px var(--shell-pad-mobile); flex-direction: column; align-items: stretch; gap: 14px; } }
-.cookie-banner__text-wrap { max-width: 70ch; min-width: 0; }
-.cookie-banner__title { font-family: var(--font-display); font-size: 20px; margin-bottom: 4px; color: var(--color-bg); }
-.cookie-banner__text { font-family: var(--font-editorial); font-size: 13px; line-height: 1.5; color: color-mix(in oklab, var(--color-bg) 80%, transparent); }
+@media (max-width: 720px) { .cookie-banner { padding: 11px var(--shell-pad-mobile); flex-direction: column; align-items: stretch; gap: 10px; } }
+.cookie-banner__text-wrap { max-width: 82ch; min-width: 0; }
+.cookie-banner__title { font-family: var(--font-display); font-size: 15px; margin-bottom: 1px; color: var(--color-bg); }
+.cookie-banner__text { font-family: var(--font-editorial); font-size: 12px; line-height: 1.45; color: color-mix(in oklab, var(--color-bg) 80%, transparent); }
 .cookie-banner__text a { text-decoration: underline; }
 .cookie-banner__actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .cookie-banner__button { padding: 10px 20px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; border: 1px solid var(--color-bg); color: var(--color-bg); background: transparent; transition: background 240ms ease, color 240ms ease; }
@@ -603,6 +603,12 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
   /* Cookie-Banner nicht ueber offenes Menue legen */
   .page:has(.nav.is-open) ~ .cookie-banner { display: none; }
   /* Floating WhatsApp-Button (immer erreichbar) */
-  .wa-float { display: inline-flex; align-items: center; justify-content: center; position: fixed; right: 16px; bottom: 16px; z-index: 90; width: 54px; height: 54px; border-radius: 50%; background: #25d366; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.22); }
+  .wa-float { display: inline-flex; align-items: center; justify-content: center; position: fixed; right: 16px; bottom: 84px; z-index: 90; width: 54px; height: 54px; border-radius: 50%; background: #25d366; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.22); }
   .wa-float svg { width: 28px; height: 28px; }
+  /* Floater nicht ueber offenem Menue */
+  .page:has(.nav.is-open) ~ .wa-float { display: none; }
 }
+/* Auf der Kontaktseite kein Floater (WhatsApp-CTA ist dort im Inhalt) */
+body:has(.contact-grid) .wa-float { display: none !important; }
+/* Akzentfarbe auf KLEINEM Text dunkler (WCAG AA) */
+.label__num, .article__rubric { color: #7a5b95; }
