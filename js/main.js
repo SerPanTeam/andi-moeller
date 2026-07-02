@@ -113,6 +113,24 @@
   var success = document.querySelector("[data-form-success]");
   var errorBox = document.querySelector("[data-form-error]");
   if (form && formContainer && success) {
+    // Vorauswahl aus URL (?leistung=slug&betrag=200)
+    try {
+      var params = new URLSearchParams(window.location.search);
+      var slug = params.get("leistung");
+      var sel = form.querySelector('[name="leistung"]');
+      if (slug && sel) {
+        var val = slug === "neugeborene-babys" ? "newborn-baby" : slug;
+        for (var i = 0; i < sel.options.length; i++) {
+          if (sel.options[i].value === val) { sel.selectedIndex = i; break; }
+        }
+      }
+      var betrag = params.get("betrag");
+      var msg = form.querySelector('[name="nachricht"]');
+      if (betrag && msg && !msg.value) {
+        msg.value = "Ich interessiere mich für einen Gutschein über " + betrag + " €.";
+      }
+    } catch (e) {}
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (errorBox) errorBox.hidden = true;

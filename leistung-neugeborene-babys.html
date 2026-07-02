@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className += " js";</script>
 <title>Neugeborene & Babys · Leistungen · Fotostudio Light-Style · Andi</title>
 <meta name="description" content="Neugeborenen- und Babyfotografie (0–12 Monate) im Fotostudio Light-Style, Rodenbach — warm, geduldig, liebevoll retuschiert.">
 <link rel="canonical" href="https://serpanteam.github.io/andi-moeller/leistung-neugeborene-babys.html">
@@ -25,6 +26,7 @@
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
 <div class="page">
 
 <header class="nav" data-nav>
@@ -35,9 +37,11 @@
     <button class="nav__toggle" type="button" data-nav-toggle aria-label="Menü öffnen" aria-expanded="false"><span class="nav__toggle-bars"></span></button>
     <nav aria-label="Hauptnavigation">
       <ul class="nav__links">
+        <li class="nav__mobile-cta nav__mobile-cta--first"><a class="button button--primary" href="buchung.html">Termin buchen</a></li>
+        <li class="nav__mobile-cta"><a class="button" href="https://wa.me/4915114268259" target="_blank" rel="noopener">Per WhatsApp</a></li>
         <li><a class="nav__link" href="index.html">Start</a></li>
         <li class="nav__item nav__item--sub">
-          <a class="nav__link is-active" href="leistungen.html">Leistungen <span class="nav__caret" aria-hidden="true">&#9662;</span></a>
+          <a class="nav__link is-active" href="leistungen.html" aria-current="page">Leistungen <span class="nav__caret" aria-hidden="true">&#9662;</span></a>
           <div class="nav__sub">
             <a href="leistung-babybauch.html">Babybauch</a>
             <a href="leistung-neugeborene-babys.html">Neugeborene & Babys</a>
@@ -67,7 +71,7 @@
   </div>
 </header>
 
-<main>
+<main id="main" tabindex="-1">
   <section class="section section--tight">
     <div class="container">
       <div class="about-intro">
@@ -76,7 +80,7 @@
           <h1 class="page-heading">Neugeborene & Babys —<br><span class="text-italic--accent-block">vom ersten Tag bis zum freien Sitz.</span></h1>
           <p class="body-lg about-intro__lede">Vom ersten Tag bis zum freien Sitz: im warmen Studio, in liebevoller Ruhe. Jede Falte, jedes Härchen — auf Pixelebene retuschiert.</p>
           <div class="button-row">
-            <a class="button button--primary" href="kontakt.html">Anfragen <svg class="icon-arrow button__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg></a>
+            <a class="button button--primary" href="kontakt.html?leistung=neugeborene-babys">Anfragen <svg class="icon-arrow button__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg></a>
             <a class="button" href="https://wa.me/4915114268259" target="_blank" rel="noopener">WhatsApp <svg class="icon-arrow button__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg></a>
           </div>
         </div>
@@ -84,9 +88,9 @@
           <div class="slider" data-slider aria-roledescription="Diashow" aria-label="Arbeiten">
             <div class="slider__track" data-slider-track>
               <figure class="media media--4-5 slider__slide"><img class="media__img" src="images/g/neugeborene-babys-1.jpg" alt="Neugeborene & Babys — Arbeit 1 von 4"></figure>
-              <figure class="media media--4-5 slider__slide"><img class="media__img" src="images/g/neugeborene-babys-2.jpg" alt="Neugeborene & Babys — Arbeit 2 von 4"></figure>
-              <figure class="media media--4-5 slider__slide"><img class="media__img" src="images/g/neugeborene-babys-3.jpg" alt="Neugeborene & Babys — Arbeit 3 von 4"></figure>
-              <figure class="media media--4-5 slider__slide"><img class="media__img" src="images/g/neugeborene-babys-4.jpg" alt="Neugeborene & Babys — Arbeit 4 von 4"></figure>
+              <figure class="media media--4-5 slider__slide"><img class="media__img" src="images/g/neugeborene-babys-2.jpg" alt="Neugeborene & Babys — Arbeit 2 von 4" loading="lazy"></figure>
+              <figure class="media media--4-5 slider__slide"><img class="media__img" src="images/g/neugeborene-babys-3.jpg" alt="Neugeborene & Babys — Arbeit 3 von 4" loading="lazy"></figure>
+              <figure class="media media--4-5 slider__slide"><img class="media__img" src="images/g/neugeborene-babys-4.jpg" alt="Neugeborene & Babys — Arbeit 4 von 4" loading="lazy"></figure>
             </div>
             <button class="slider__nav slider__nav--prev" type="button" data-slider-prev aria-label="Vorheriges Bild">&#8249;</button>
             <button class="slider__nav slider__nav--next" type="button" data-slider-next aria-label="Nächstes Bild">&#8250;</button>
@@ -106,13 +110,32 @@
 
   <section class="section section--flush-top">
     <div class="container">
+      <div class="reveal info-row">
+        <div class="info-row__item">
+          <span class="label">Ablauf</span>
+          <p class="body-serif">Kurzes, unverbindliches Vorgespräch → individuell geplantes Shooting → eine Auswahl fertig retuschierter Bilder.</p>
+        </div>
+        <div class="info-row__item">
+          <span class="label">Preis</span>
+          <p class="body-serif">Jedes Shooting stellen wir individuell zusammen — den passenden Preis nennen wir dir gern im Vorgespräch. Der Erstkontakt kostet nichts.</p>
+        </div>
+        <div class="info-row__item">
+          <span class="label">Kontakt</span>
+          <p class="body-serif">Am schnellsten per <a href="https://wa.me/4915114268259" target="_blank" rel="noopener">WhatsApp</a> — Antwort meist am selben Tag.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--flush-top">
+    <div class="container">
       <div class="reveal">
         <div class="closing-cta closing-cta--after-rule">
           <h2>Klingt nach deinem<br><span class="text-italic--accent-block">nächsten Shooting?</span></h2>
           <div>
             <p class="body-lg closing-cta__lede">Schreib uns — am liebsten per WhatsApp. Wir antworten persönlich, meistens am selben Tag.</p>
             <div class="button-row">
-              <a class="button button--primary" href="kontakt.html">Anfragen <svg class="icon-arrow button__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg></a>
+              <a class="button button--primary" href="kontakt.html?leistung=neugeborene-babys">Anfragen <svg class="icon-arrow button__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg></a>
               <a class="button" href="leistungen.html">Alle Leistungen <svg class="icon-arrow button__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg></a>
             </div>
           </div>
@@ -174,7 +197,11 @@
 </footer>
 </div>
 
-<div class="cookie-banner" data-cookie-banner hidden>
+<a class="wa-float" href="https://wa.me/4915114268259" target="_blank" rel="noopener" aria-label="Per WhatsApp schreiben">
+  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.2-.4c-1-1.6-1.5-3.4-1.5-5.3C5.5 9.3 10.2 4.7 16 4.7c5.7 0 10.4 4.6 10.4 10.3S21.7 24.8 16 24.8zm5.7-7.7c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-.9 1.2-.3.2-.6.1c-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-1 1-1.3 2.3-1.3 2.6s.9 2.6 2.3 4.2c2 2.3 3.6 3 4.9 3.5.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z"/></svg>
+</a>
+
+<div class="cookie-banner" data-cookie-banner role="region" aria-label="Cookie-Hinweis" hidden>
   <div class="cookie-banner__text-wrap">
     <div class="cookie-banner__title">Cookies &amp; Datenschutz</div>
     <p class="cookie-banner__text">Technisch notwendige Cookies sind immer aktiv. Mit „Akzeptieren“ erlaubst du zusätzlich Statistik (Google Analytics) und das Laden von Google Maps. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>

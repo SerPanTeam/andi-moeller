@@ -10,7 +10,7 @@
   --color-paper:        #efeaf3;
   --color-ink:          #2b2730;
   --color-ink-2:        #585161;
-  --color-muted:        #8d8794;
+  --color-muted:        #6b6572;
   --color-accent:       #9b7cb5;
   --color-accent-2:     #b39cc9;
   --color-hairline:     rgba(43, 39, 48, .16);
@@ -233,12 +233,12 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 .icon-arrow { width: 14px; height: 14px; display: inline-block; flex-shrink: 0; }
 
 /* ── Reveal / Page ────────────────────────────────────────────── */
-.reveal {
+.js .reveal {
   opacity: 0; transform: translateY(18px);
   transition: opacity 900ms cubic-bezier(.2,.7,.2,1), transform 900ms cubic-bezier(.2,.7,.2,1);
 }
-.reveal--in { opacity: 1; transform: none; }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+.js .reveal--in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; transition: none; } }
 .page { animation: page-in 700ms cubic-bezier(.2,.7,.2,1) both; }
 @keyframes page-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .page { animation: none; } }
@@ -410,7 +410,7 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 .article__lede { font-size: 22px; line-height: 1.45; color: var(--color-ink); margin-bottom: 30px; }
 .article__subheading { font-family: var(--font-display); font-style: italic; font-size: 28px; font-weight: 400; margin: 36px 0 12px; color: var(--color-accent); }
 .article__pull { margin: 40px -56px; padding: 28px 0; border-top: 1px solid var(--color-hairline); border-bottom: 1px solid var(--color-hairline); font-family: var(--font-display); font-size: 32px; line-height: 1.15; letter-spacing: -.01em; color: var(--color-ink); text-align: center; }
-@media (max-width: 720px) { .article__pull { margin: 28px 0; } }
+@media (max-width: 900px) { .article__pull { margin: 28px 0; } }
 .article__pull--italic { font-style: italic; }
 .article__signoff { margin-top: 36px; font-style: italic; }
 .article__further { max-width: 720px; margin: 0 auto; }
@@ -456,6 +456,11 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 .form-success { padding: 56px 32px; border: 1px solid var(--color-hairline); background: var(--color-paper); text-align: center; }
 .form-success__title { font-family: var(--font-display); font-style: italic; font-size: 44px; color: var(--color-accent); margin-bottom: 16px; }
 .form-error { margin-top: 20px; padding: 20px 24px; border: 1px solid var(--color-accent); background: var(--color-tint); }
+.field__req { color: var(--color-accent); }
+.field--check { grid-column: 1 / -1; }
+.field__check { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; line-height: 1.5; color: var(--color-ink-2); cursor: pointer; }
+.field__check input { margin-top: 3px; width: 16px; height: 16px; flex: none; accent-color: var(--color-accent); }
+.field__check a { text-decoration: underline; text-underline-offset: 2px; }
 .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
 /* ── Kontakt ──────────────────────────────────────────────────── */
@@ -575,3 +580,29 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 .cookie-banner__button { padding: 10px 20px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; border: 1px solid var(--color-bg); color: var(--color-bg); background: transparent; transition: background 240ms ease, color 240ms ease; }
 .cookie-banner__button--accept { background: var(--color-bg); color: var(--color-ink); }
 .cookie-banner__button:hover { background: color-mix(in oklab, var(--color-bg) 80%, transparent); color: var(--color-ink); }
+
+/* ── Review-Fixes (Nutzertests) ───────────────────────────────── */
+/* Skip-Link (A11y) */
+.skip-link { position: fixed; top: 8px; left: 8px; z-index: 200; background: var(--color-ink); color: var(--color-bg); padding: 10px 16px; }
+.skip-link:not(:focus) { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Info-Zeile auf Leistungsseiten (Ablauf/Preis/Kontakt) */
+.info-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; padding-top: 32px; border-top: 1px solid var(--color-hairline); }
+.info-row__item .label { margin-bottom: 12px; }
+.info-row__item p { max-width: 34ch; }
+.info-row__item a { text-decoration: underline; text-underline-offset: 3px; }
+@media (max-width: 880px) { .info-row { grid-template-columns: 1fr; gap: 24px; } }
+
+/* Mobiler CTA im Burger-Menue + Floating WhatsApp */
+.nav__mobile-cta { display: none; }
+.wa-float { display: none; }
+@media (max-width: 900px) {
+  .nav__mobile-cta { display: block; width: 100%; }
+  .nav__mobile-cta .button { display: inline-flex; justify-content: center; width: 100%; }
+  .nav__mobile-cta--first { margin-bottom: 6px; }
+  /* Cookie-Banner nicht ueber offenes Menue legen */
+  .page:has(.nav.is-open) ~ .cookie-banner { display: none; }
+  /* Floating WhatsApp-Button (immer erreichbar) */
+  .wa-float { display: inline-flex; align-items: center; justify-content: center; position: fixed; right: 16px; bottom: 16px; z-index: 90; width: 54px; height: 54px; border-radius: 50%; background: #25d366; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.22); }
+  .wa-float svg { width: 28px; height: 28px; }
+}
