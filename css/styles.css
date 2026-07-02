@@ -322,6 +322,7 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 
 /* ── Journal ──────────────────────────────────────────────────── */
 .journal-masthead { display: flex; align-items: center; justify-content: space-between; border-bottom: 2px solid var(--color-ink); padding-bottom: 14px; }
+.journal-teaser { margin-top: 28px; max-width: 62ch; display: grid; gap: 20px; justify-items: start; }
 .journal-masthead__title { font-family: var(--font-display); font-style: italic; font-size: 28px; }
 .journal-masthead__title--large { font-size: 56px; line-height: 1; margin-top: 8px; }
 .journal-masthead__title-regular { font-style: normal; color: var(--color-ink); }
@@ -393,7 +394,10 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 .footer__social-list { display: flex; flex-direction: column; gap: 10px; font-size: 13px; }
 .footer__social:hover { color: var(--color-accent); }
 .footer__copy-row { margin-top: 40px; padding-top: 22px; border-top: 1px solid var(--color-hairline-2); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-muted); }
-.footer__legal-links { display: flex; gap: 16px; flex-wrap: wrap; }
+.footer__legal-links { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+.footer__legal-links a, .footer__legal-link-btn { color: var(--color-muted); }
+.footer__legal-links a:hover, .footer__legal-link-btn:hover { color: var(--color-accent); }
+.footer__legal-link-btn { font: inherit; letter-spacing: inherit; text-transform: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 
 /* ── Formulare ────────────────────────────────────────────────── */
 .form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; }
