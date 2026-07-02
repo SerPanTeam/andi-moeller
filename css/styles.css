@@ -625,6 +625,11 @@ body:has(.contact-grid) .wa-float { display: none !important; }
 .review__stars { color: var(--color-accent); letter-spacing: 3px; font-size: 15px; }
 .review__text { font-family: var(--font-editorial); font-size: 15px; line-height: 1.6; color: var(--color-ink); font-style: italic; }
 .review__author { font-family: var(--font-ui); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--color-muted); font-style: normal; margin-top: auto; }
+/* Einzelne genre-spezifische Bewertung auf Leistungsseiten */
+.service-review { max-width: 640px; margin: 0 auto; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.service-review .review__stars { letter-spacing: 3px; }
+.service-review .review__text { font-family: var(--font-editorial); font-size: 21px; line-height: 1.5; font-style: italic; color: var(--color-ink); }
+@media (max-width: 560px) { .service-review .review__text { font-size: 18px; } }
 /* Indikator fuer externe Links (Text-Links, keine Buttons/Icon-Links) */
 a[target="_blank"]:not(.button):not(.nav__cta):not(.nav__link):not(.link-arrow):not(.footer__social):not(.wa-float)::after {
   content: "\2197"; font-size: .8em; margin-left: .12em; opacity: .65;
