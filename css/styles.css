@@ -160,9 +160,30 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 .nav.is-open .nav__toggle-bars::before { transform: translateY(6px) rotate(45deg); }
 .nav.is-open .nav__toggle-bars::after { transform: translateY(-6px) rotate(-45deg); }
 
+/* Leistungen-Dropdown (Desktop) */
+.nav__item--sub { position: relative; }
+.nav__caret { font-size: 9px; vertical-align: middle; color: var(--color-muted); }
+.nav__sub {
+  position: absolute; top: 100%; left: 50%; transform: translateX(-50%); margin-top: 8px; min-width: 360px;
+  background: var(--color-bg); border: 1px solid var(--color-hairline); box-shadow: 0 24px 60px rgba(43, 39, 48, .12);
+  padding: 14px 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 2px 26px; z-index: 60;
+  opacity: 0; visibility: hidden; translate: 0 6px; transition: opacity .18s ease, translate .18s ease;
+}
+.nav__item--sub:hover .nav__sub, .nav__item--sub:focus-within .nav__sub { opacity: 1; visibility: visible; translate: 0 0; }
+.nav__sub a { font-family: var(--font-ui); font-size: 12.5px; letter-spacing: .02em; color: var(--color-ink-2); padding: 7px 6px; white-space: nowrap; transition: color .2s; }
+.nav__sub a:hover { color: var(--color-accent); }
+
 @media (max-width: 900px) {
   .nav__toggle { display: inline-flex; }
   .nav__cta { display: none; }
+  .nav__caret { display: none; }
+  .nav__sub {
+    position: static; transform: none; translate: none; margin: 2px 0 6px; min-width: 0;
+    opacity: 1; visibility: visible; background: transparent; border: 0; box-shadow: none;
+    display: flex; flex-direction: column; gap: 0; padding: 2px 0 4px 16px;
+    border-left: 2px solid var(--color-hairline);
+  }
+  .nav__sub a { font-size: 14px; padding: 8px 0; }
   .nav__links {
     position: absolute; left: 0; right: 0; top: 100%;
     flex-direction: column; align-items: flex-start; gap: 4px;
@@ -171,7 +192,7 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
     max-height: 0; overflow: hidden; opacity: 0; pointer-events: none;
     transition: max-height 320ms ease, opacity 240ms ease;
   }
-  .nav.is-open .nav__links { max-height: 80vh; opacity: 1; pointer-events: auto; }
+  .nav.is-open .nav__links { max-height: 85vh; opacity: 1; pointer-events: auto; overflow-y: auto; }
   .nav__link { font-size: 16px; padding: 10px 0; }
 }
 
