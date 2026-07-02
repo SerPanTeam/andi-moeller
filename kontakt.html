@@ -63,7 +63,14 @@
       <div class="contact-grid">
         <div class="reveal">
           <div data-form-container>
-          <form class="form" data-contact-form>
+          <!-- Versand ueber Web3Forms (statik-tauglich). ACCESS-KEY vom Team eintragen:
+               kostenloser Key auf https://web3forms.com -> Zustellung an contact@studio-light-style.de.
+               Alternativ Formspree/firmeneigenen Endpoint: action + access_key entsprechend ersetzen. -->
+          <form class="form" data-contact-form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="DEIN-WEB3FORMS-ACCESS-KEY">
+            <input type="hidden" name="subject" value="Neue Anfrage über die Website — Fotostudio Light-Style">
+            <input type="hidden" name="from_name" value="Website Fotostudio Light-Style">
+            <input type="checkbox" name="botcheck" class="visually-hidden" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="field">
               <label class="field__label" for="f-vorname">Vorname</label>
               <input class="field__input" type="text" id="f-vorname" name="vorname" placeholder="Anna" required>
@@ -121,6 +128,10 @@
             <div class="form-success__title">Danke.</div>
             <p class="body-serif">Wir haben deine Anfrage erhalten. Du hörst meist am selben Tag von uns — spätestens am nächsten Werktag.</p>
           </div>
+
+          <div class="form-error" data-form-error hidden>
+            <p class="body-serif">Da ist etwas schiefgelaufen. Bitte versuch es später erneut oder schreib uns direkt <a href="https://wa.me/4915114268259" target="_blank" rel="noopener">per WhatsApp</a> oder an <a href="mailto:contact@studio-light-style.de">contact@studio-light-style.de</a>.</p>
+          </div>
         </div>
 
         <div class="reveal contact-details" data-reveal-delay="120">
@@ -147,9 +158,12 @@
 
       <div class="reveal contact-map">
         <span class="label contact-map__label">Anfahrt · Google Maps</span>
-        <div class="map">
-          <div class="map__pin"></div>
-          <div class="map__address">Jahnstr. 7 · 63517 Rodenbach</div>
+        <div class="map" data-map data-map-src="https://maps.google.com/maps?q=Jahnstr.%207,%2063517%20Rodenbach&amp;z=15&amp;output=embed">
+          <div class="map__placeholder" data-map-placeholder>
+            <div class="map__address">Jahnstr. 7 · 63517 Rodenbach</div>
+            <button type="button" class="button button--primary map__load" data-map-load>Karte laden</button>
+            <p class="map__consent">Beim Laden werden Daten an Google übertragen. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -211,7 +225,7 @@
 <div class="cookie-banner" data-cookie-banner hidden>
   <div class="cookie-banner__text-wrap">
     <div class="cookie-banner__title">Cookies &amp; Datenschutz</div>
-    <p class="cookie-banner__text">Wir verwenden nur technisch notwendige Cookies, um diese Seite bereitzustellen. Es findet kein Tracking ohne deine Einwilligung statt.</p>
+    <p class="cookie-banner__text">Technisch notwendige Cookies sind immer aktiv. Mit „Akzeptieren“ erlaubst du zusätzlich Statistik (Google Analytics) und das Laden von Google Maps. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</p>
   </div>
   <div class="cookie-banner__actions">
     <button class="cookie-banner__button" type="button" data-cookie-action="declined">Ablehnen</button>
