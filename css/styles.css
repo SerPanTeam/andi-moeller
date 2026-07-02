@@ -569,13 +569,15 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 
 /* ── Cookie-Banner ────────────────────────────────────────────── */
 .cookie-banner {
-  position: fixed; left: 24px; right: auto; bottom: 24px; z-index: 80;
-  max-width: 430px; border-radius: 8px; box-shadow: 0 14px 44px rgba(0,0,0,.30);
+  position: fixed; left: auto; right: 24px; bottom: 24px; z-index: 80;
+  max-width: 380px; border-radius: 8px; box-shadow: 0 14px 44px rgba(0,0,0,.30);
   background: var(--color-ink); color: var(--color-bg);
   padding: 16px 20px;
   display: flex; flex-direction: column; align-items: stretch; gap: 12px;
 }
 .cookie-banner[hidden] { display: none; }
+/* Hero-CTAs sind links ausgerichtet -> Banner rechts unten haelt sie frei.
+   Auf Mobil schmale Leiste unten (Hero-CTAs liegen dort weit oberhalb). */
 @media (max-width: 720px) { .cookie-banner { left: 12px; right: 12px; bottom: 12px; max-width: none; padding: 14px 16px; } }
 .cookie-banner__text-wrap { max-width: 82ch; min-width: 0; }
 .cookie-banner__title { font-family: var(--font-display); font-size: 15px; margin-bottom: 1px; color: var(--color-bg); }
