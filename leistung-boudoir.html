@@ -72,6 +72,11 @@
 <main id="main" tabindex="-1">
   <section class="section section--tight">
     <div class="container">
+      <nav class="breadcrumb" aria-label="Brotkrumen">
+        <a href="index.html">Start</a> <span aria-hidden="true">›</span>
+        <a href="leistungen.html">Leistungen</a> <span aria-hidden="true">›</span>
+        <span aria-current="page">Boudoir</span>
+      </nav>
       <div class="about-intro">
         <div class="reveal">
           <span class="label"><span class="label__num">06</span>Privat & elegant</span>
@@ -103,7 +108,7 @@
   <article class="article reveal">
     <div class="article__body">
       <p class="article__lede">Boudoir funktioniert nur mit Vertrauen. Wir nehmen uns Zeit, besprechen vorab Wünsche und Grenzen und sorgen für eine geschützte, entspannte Atmosphäre — diskret und respektvoll.</p>
-      <p>Mit geformtem Licht und klarer Bildsprache entstehen elegante, selbstbewusste Aufnahmen fernab von Klischees. Deine Bilder gehören dir; der Umgang mit ihnen bleibt vollständig in deiner Hand. Deine Anfrage behandeln wir vertraulich; auf Wunsch bist du beim Shooting nicht allein — eine Begleitperson ist jederzeit willkommen.</p>
+      <p>Mit geformtem Licht und klarer Bildsprache entstehen elegante, selbstbewusste Aufnahmen fernab von Klischees. Deine Bilder gehören dir; der Umgang mit ihnen bleibt vollständig in deiner Hand. Deine Anfrage behandeln wir vertraulich; auf Wunsch bist du beim Shooting nicht allein — eine Begleitperson ist jederzeit willkommen. Ohne deine ausdrückliche Freigabe veröffentlichen wir keine Aufnahmen.</p>
     </div>
   </article>
 
@@ -142,6 +147,18 @@
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://serpanteam.github.io/andi-moeller/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://serpanteam.github.io/andi-moeller/leistungen.html" },
+      { "@type": "ListItem", "position": 3, "name": "Boudoir", "item": "https://serpanteam.github.io/andi-moeller/leistung-boudoir.html" }
+    ]
+  }
+  </script>
 </main>
 
 <footer class="footer">
@@ -165,7 +182,7 @@
       <div>
         <h2 class="footer__col-title">Service</h2>
         <ul class="footer__nav">
-          <li><a href="buchung.html">Terminbuchung</a></li>
+          <li><a href="buchung.html">Ablauf &amp; Buchung</a></li>
           <li><a href="gutscheine.html">Gutscheine</a></li>
           <li><a href="aktionen.html">Aktionen</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>

@@ -72,6 +72,11 @@
 <main id="main" tabindex="-1">
   <section class="section section--tight">
     <div class="container">
+      <nav class="breadcrumb" aria-label="Brotkrumen">
+        <a href="index.html">Start</a> <span aria-hidden="true">›</span>
+        <a href="leistungen.html">Leistungen</a> <span aria-hidden="true">›</span>
+        <span aria-current="page">Werbefotografie</span>
+      </nav>
       <div class="about-intro">
         <div class="reveal">
           <span class="label"><span class="label__num">12</span>Kommerziell</span>
@@ -142,6 +147,18 @@
       </div>
     </div>
   </section>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Start", "item": "https://serpanteam.github.io/andi-moeller/index.html" },
+      { "@type": "ListItem", "position": 2, "name": "Leistungen", "item": "https://serpanteam.github.io/andi-moeller/leistungen.html" },
+      { "@type": "ListItem", "position": 3, "name": "Werbefotografie", "item": "https://serpanteam.github.io/andi-moeller/leistung-werbung.html" }
+    ]
+  }
+  </script>
 </main>
 
 <footer class="footer">
@@ -165,7 +182,7 @@
       <div>
         <h2 class="footer__col-title">Service</h2>
         <ul class="footer__nav">
-          <li><a href="buchung.html">Terminbuchung</a></li>
+          <li><a href="buchung.html">Ablauf &amp; Buchung</a></li>
           <li><a href="gutscheine.html">Gutscheine</a></li>
           <li><a href="aktionen.html">Aktionen</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>

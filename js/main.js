@@ -137,6 +137,12 @@
       }
     } catch (e) {}
 
+    // Wunschtermin: keine Vergangenheit zulassen
+    var dateField = form.querySelector('input[type="date"]');
+    if (dateField && !dateField.min) {
+      dateField.min = new Date().toISOString().slice(0, 10);
+    }
+
     // Deutsche Pflichtfeld-Meldungen
     form.querySelectorAll("[required]").forEach(function (el) {
       el.addEventListener("invalid", function () {
