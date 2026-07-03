@@ -614,7 +614,9 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
   /* Cookie-Banner nicht ueber offenes Menue legen */
   .page:has(.nav.is-open) ~ .cookie-banner { display: none; }
   /* Floating WhatsApp-Button (immer erreichbar) */
-  .wa-float { display: inline-flex; align-items: center; justify-content: center; position: fixed; right: 16px; bottom: 84px; z-index: 90; width: 54px; height: 54px; border-radius: 50%; background: #25d366; color: #fff; box-shadow: 0 8px 24px rgba(0,0,0,.22); }
+  /* Floating-WhatsApp entfernt: ueberdeckte auf Mobil/Tablet Slider & Text.
+     WhatsApp bleibt im Mobilmenue, auf jeder Leistungsseite und im Footer erreichbar. */
+  .wa-float { display: none; }
   .wa-float svg { width: 28px; height: 28px; }
   /* Floater nicht ueber offenem Menue */
   .page:has(.nav.is-open) ~ .wa-float { display: none; }
