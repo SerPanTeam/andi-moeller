@@ -564,6 +564,7 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 .about-intro { display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: end; }
 @media (max-width: 880px) { .about-intro { grid-template-columns: 1fr; gap: 32px; } }
 .about-intro__lede { margin-top: 32px; max-width: 44ch; }
+.about-intro .button-row { margin-top: 30px; }
 
 /* ── Closing CTA ──────────────────────────────────────────────── */
 .closing-cta { border-top: 1px solid var(--color-hairline); padding-top: 72px; display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: end; }
