@@ -77,12 +77,14 @@
      wurde bewusst NICHT uebernommen, weil diese Dienste hier nicht laufen.
      >> VOR GO-LIVE zwingend rechtlich pruefen lassen (Mandant / Anwalt). <<
      Offene Punkte / anzupassen sobald bekannt:
-       - Formular-Dienstleister (Web3Forms/Formspree ODER firmeneigener
-         Mail-Service/CRM) inkl. AV-Vertrag + Server-Standort eintragen.
-       - Google Analytics 4: Mess-ID + AV-Vertrag ergaenzen, sobald vom
-         Kunden geliefert. Aktuell nur beschrieben, noch nicht aktiv.
-       - Google Fonts: derzeit von Google-Servern geladen -> ggf. lokal
-         hosten, dann diesen Abschnitt anpassen/streichen.
+       - Abschnitt 2 (Hosting) wird von build.py gesetzt: --hosting github
+         (unsere Pages-Kopie) oder --hosting selbst (Uebergabe an den Kunden,
+         Text nennt IONOS -> muss der Kunde auf seinen echten Hoster pruefen).
+       - Formular: Web3Forms ist benannt; AV-Vertrag muss der Betreiber
+         tatsaechlich abschliessen. Bei anderem Dienst Abschnitt 5 anpassen.
+       - Google Analytics 4: Mess-ID + AV-Vertrag ergaenzen, sobald hinterlegt.
+         Aktuell nur beschrieben, noch nicht aktiv.
+       - Google Fonts: erledigt, Schriften liegen lokal (Abschnitt 4).
        - Google Maps: wird erst nach Einwilligung geladen (Consent-Gate).
      ================================================================ -->
   <section class="section section--tight">
@@ -102,7 +104,7 @@
       <p>Andreas Möller · Fotostudio Light-Style<br>Jahnstr. 7, 63517 Rodenbach<br>E-Mail: <a href="mailto:contact@studio-light-style.de">contact@studio-light-style.de</a></p>
 
       <h2 class="article__subheading">2. Hosting (GitHub Pages)</h2>
-      <p>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc. (88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Beim Aufruf der Seiten verarbeitet der Hoster technisch notwendige Daten (u. a. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp) in Server-Logfiles, um die Auslieferung und Sicherheit der Website zu gewährleisten. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren, stabilen Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Eine Datenübermittlung in die USA kann stattfinden; sie stützt sich auf geeignete Garantien (u. a. Standardvertragsklauseln).</p>
+      <p>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc. (88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Beim Aufruf der Seiten verarbeitet der Hoster technisch notwendige Daten (u. a. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Browsertyp) in Server-Logfiles, um die Auslieferung und Sicherheit der Website zu gewährleisten. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren, stabilen Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Eine Datenübermittlung in die USA kann stattfinden; sie stützt sich auf geeignete Garantien (u. a. Standardvertragsklauseln).</p>
 
       <h2 class="article__subheading">3. SSL-/TLS-Verschlüsselung</h2>
       <p>Diese Seite nutzt aus Sicherheitsgründen eine SSL-/TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennst du am „https://“ in der Adresszeile deines Browsers.</p>
@@ -111,7 +113,7 @@
       <p>Die verwendeten Schriftarten werden lokal von unserem Server ausgeliefert (self-hosted). Es findet dabei keine Verbindung zu Google-Servern und keine Übermittlung deiner IP-Adresse an Dritte statt.</p>
 
       <h2 class="article__subheading">5. Kontaktformular &amp; Kontaktaufnahme</h2>
-      <p>Wenn du uns über das Formular, per E-Mail oder WhatsApp kontaktierst, verarbeiten wir die von dir angegebenen Daten (z. B. Name, E-Mail, Telefon, Nachricht) zur Bearbeitung deiner Anfrage und für Anschlussfragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. lit. f DSGVO. Die Absendung des Formulars erfolgt über einen Formular-Dienstleister, der die Nachricht an unser Postfach zustellt. Die Daten werden gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+      <p>Wenn du uns über das Formular, per E-Mail oder WhatsApp kontaktierst, verarbeiten wir die von dir angegebenen Daten (z. B. Name, E-Mail, Telefon, Nachricht) zur Bearbeitung deiner Anfrage und für Anschlussfragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (vorvertragliche Maßnahmen) bzw. lit. f DSGVO. Die Absendung des Formulars erfolgt über den Dienst <strong>Web3Forms</strong> (web3forms.com); dieser nimmt die Nachricht entgegen und stellt sie an unser Postfach zu. Mit dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung. Die Daten werden gelöscht, sobald sie für den Zweck nicht mehr erforderlich sind und keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
 
       <h2 class="article__subheading">6. Google Maps (nur nach Einwilligung)</h2>
       <p>Zur Anzeige unseres Standorts können wir Google Maps (Google Ireland Limited) einbinden. Die Karte wird <strong>erst geladen, nachdem du eingewilligt hast</strong> (Klick auf „Karte laden“ bzw. Zustimmung im Cookie-Banner). Dabei werden Daten wie deine IP-Adresse an Google übertragen, ggf. in die USA. Rechtsgrundlage ist deine Einwilligung (Art. 6 Abs. 1 lit. a DSGVO), die du jederzeit über die Cookie-Einstellungen widerrufen kannst.</p>
@@ -128,7 +130,7 @@
       <h2 class="article__subheading">10. Deine Rechte</h2>
       <p>Dir stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und Widerspruch zu. Eine erteilte Einwilligung kannst du jederzeit mit Wirkung für die Zukunft widerrufen. Wenn du glaubst, dass die Verarbeitung deiner Daten gegen das Datenschutzrecht verstößt, kannst du dich bei einer Aufsichtsbehörde beschweren — in Hessen beim Hessischen Beauftragten für Datenschutz und Informationsfreiheit. Wende dich für die Ausübung deiner Rechte an die oben genannte Kontaktadresse.</p>
 
-      <p class="muted">Stand: Juli 2026.</p>
+      <p class="muted">Stand: August 2026.</p>
     </div>
   </article>
 </main>
