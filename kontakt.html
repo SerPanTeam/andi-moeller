@@ -80,9 +80,10 @@
 
       <div class="contact-grid">
         <div class="reveal">
-          <div data-form-container>
+          <div id="formular" data-form-container>
           <!-- Versand ueber Web3Forms (statik-tauglich). ACCESS-KEY vom Team eintragen:
-               kostenloser Key auf https://web3forms.com -> Zustellung an contact@studio-light-style.de.
+               kostenloser Key auf https://web3forms.com -> Zustellung an die Studio-Adresse
+               (Adresse bewusst nicht im Quelltext: Spamschutz, siehe Impressum).
                Alternativ Formspree/firmeneigenen Endpoint: action + access_key entsprechend ersetzen. -->
           <form class="form" data-contact-form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="DEIN-WEB3FORMS-ACCESS-KEY">
@@ -154,7 +155,7 @@
           </div>
 
           <div class="form-error" data-form-error hidden>
-            <p class="body-serif">Da ist etwas schiefgelaufen. Bitte versuch es später erneut oder schreib uns direkt <a href="https://wa.me/4915114268259" target="_blank" rel="noopener">per WhatsApp</a> oder an <a href="mailto:contact@studio-light-style.de">contact@studio-light-style.de</a>.</p>
+            <p class="body-serif">Da ist etwas schiefgelaufen. Bitte versuch es später erneut oder schreib uns direkt <a href="https://wa.me/4915114268259" target="_blank" rel="noopener">per WhatsApp</a> oder <a href="#formular" data-mail-user="contact" data-mail-domain="studio-light-style.de" data-mail-subject="Anfrage über die Website">per E-Mail</a>.</p>
           </div>
         </div>
 
@@ -171,7 +172,10 @@
           </div>
           <div>
             <span class="label contact-detail__label">E-Mail</span>
-            <div class="contact-detail__value contact-detail__value--small"><a href="mailto:contact@studio-light-style.de">contact@studio-light-style.de</a></div>
+            <div class="button-row button-row--mid">
+              <a class="button" href="#formular" data-mail-user="contact" data-mail-domain="studio-light-style.de" data-mail-subject="Anfrage über die Website">E-Mail schreiben <svg class="icon-arrow button__icon" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="square"/></svg></a>
+            </div>
+            <p class="body-serif--small contact-detail__hint">Der Button öffnet dein E-Mail-Programm — die Adresse steht bewusst nicht offen auf der Seite (Spamschutz).</p>
           </div>
           <div class="contact-hours">
             <span class="label contact-detail__label">Öffnungszeiten</span>
@@ -201,7 +205,7 @@
         <img class="footer__logo" src="images/logo.png" alt="Fotostudio Light-Style" width="423" height="173">
         <p class="body-serif footer__about">Andi · Fotograf seit 1990. Studio in Rodenbach, weltweit tätig.</p>
         <address class="footer__address">Jahnstr. 7 · 63517 Rodenbach</address>
-        <p class="footer__contact"><a href="mailto:contact@studio-light-style.de">contact@studio-light-style.de</a></p>
+        <p class="footer__contact"><a class="footer__mail" href="kontakt.html#formular" data-mail-user="contact" data-mail-domain="studio-light-style.de" data-mail-subject="Anfrage über die Website">E-Mail schreiben</a></p>
       </div>
       <div>
         <h2 class="footer__col-title">Atelier</h2>

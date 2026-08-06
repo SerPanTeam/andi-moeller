@@ -298,3 +298,21 @@
     });
   });
 })();
+
+/* E-Mail-Schutz (Kundenwunsch 14.07.2026): die Adresse steht nirgends als Text
+   im Markup, sondern wird zur Laufzeit aus data-Teilen zusammengesetzt. Spam-
+   Harvester lesen kein JS. Ohne JS bleibt der Button ein normaler Link auf das
+   Kontaktformular. Rechtstexte (Impressum/Datenschutz) bleiben bewusst im
+   Klartext — dort ist die Angabe gesetzlich gefordert. */
+(function () {
+  var links = document.querySelectorAll("[data-mail-user][data-mail-domain]");
+  if (!links.length) return;
+
+  links.forEach(function (link) {
+    var addr = link.getAttribute("data-mail-user") + "@" + link.getAttribute("data-mail-domain");
+    var subject = link.getAttribute("data-mail-subject");
+    link.setAttribute("href", "mailto:" + addr + (subject ? "?subject=" + encodeURIComponent(subject) : ""));
+    link.removeAttribute("target");
+    link.removeAttribute("rel");
+  });
+})();
