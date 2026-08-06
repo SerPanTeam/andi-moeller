@@ -444,6 +444,10 @@ h3 { font-size: clamp(24px, 2.2vw, 34px); line-height: 1.15; }
 .footer__legal-links a, .footer__legal-link-btn { color: var(--color-muted); }
 .footer__legal-links a:hover, .footer__legal-link-btn:hover { color: var(--color-accent); }
 .footer__legal-link-btn { font: inherit; letter-spacing: inherit; text-transform: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+/* Entwickler-Hinweis: eigene Zeile unter der Copyright-Zeile */
+.footer__credit { margin-top: 18px; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--color-muted); }
+.footer__credit a { color: var(--color-muted); }
+.footer__credit a:hover { color: var(--color-accent); }
 
 /* ── Formulare ────────────────────────────────────────────────── */
 .form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 28px; }
